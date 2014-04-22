@@ -1,0 +1,138 @@
+!!!
+%html
+%head
+  %meta{:charset => "utf-8"}
+  %title Tristone - Дистрибьютеры
+  %link{:href => 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700&subset=latin,cyrillic-ext,cyrillic', :rel => 'stylesheet', :type => 'text/css'}
+  %link{:rel => "stylesheet", :href => "css/main.css"}
+%body
+  %header.header
+    %a{:href => "#"}<
+      %img{:src => "images/logo.png", :width => 113, :height => 24, :alt => "Отделочные материалы Tristone®"}
+    %nav.nav
+      %ul.nav-list
+        %li.nav-item<
+          %a.nav-link{:href => "#"} О компании
+        %li.nav-item<
+          %a.nav-link{:href => "#"} Каталог цветов
+        %li.nav-item<
+          %a.nav-link{:href => "#"} Изделия из камня
+        %li.nav-item<
+          %a.nav-link.nav-active{:href => "#"} Где заказать?
+        %li.nav-item<
+          %a.nav-link{:href => "#"} Техническая информация
+        %li.nav-item<
+          %a.nav-link{:href => "#"} Как связаться
+
+  .body
+    %aside.left-col
+      %h2 Где заказать?
+      %ul.left-menu
+        %li.left-menu-item.left-menu-active<
+          %a.left-menu-link{:href => "#"} Дистрибьюторы
+        %li.left-menu-item<
+          %a.left-menu-link{:href => "#"} Сертифицированные обработчики
+      %p.snippet
+        Хотите стать партнером?
+        %br
+        %a{htrf: '#'} Написать нам
+      %p.snippet
+        Материалы для поверхностей Tristone® можно встретить везде. Именно эти поверхности выбирают
+        архитекторы и дизайнеры для применений в медицинской и пищевой отрасли, в гостиничном деле,
+        в бизнес-центрах, школах и, конечно, частных домах — везде Tristone®.
+
+    %section.page-content
+      .map-content
+        Здесь вставить карту
+      .wrapper
+        %h1
+          %span Дистрибьюторы /
+          Салон мебели «Möbel & Zeit» -
+          %br
+          Комсомольск-на-Амуре
+      .distributors-one
+        .distributor-box
+          .distributor-contact
+            %p
+              340043, г. Комсомольск-на-Амуре,
+              %br
+              ул. Уральских борцов, 144, строение 1, офис 48
+            %p
+              +7 (495) 781-60-30
+              %br
+              +7 (495) 781-60-40
+              %br
+              %a{href: 'mailto:info@eurohim1.ru'} info@eurohim1.ru
+            %p
+              %a{href: '#'} www.eurohim1.ru
+          .distributor-filials
+            %h3 Филиалы и представительства:
+            %ul
+              %li Санкт-Петербург +7 (812) 313-05-53/54
+              %li Краснодар +7 (861) 200-94-16/17
+              %li Нижний Новгород +7 (831) 212-3505
+              %li Екатеринбург +7 (343) 378-3194
+              %li Новосибирск +7 (383) 224-5496
+          %form.distributor-order
+            %fieldset
+              %input.text-field{type: 'text', placeholder: 'Представьтесь (Имя, Фамилия)'}
+              %input.text-field{type: 'text', placeholder: 'Номер телефона'}
+              %input.text-field{type: 'text', placeholder: 'E-mail'}
+              %textarea.textarea{placeholder: 'Текст запроса', rows: 5}
+              %input.submit{type: 'submit', value: 'Отправить'}
+              .file-field
+                %input{type: 'file'}
+            .tip
+              * - Объем файла не должен превышать 20Мб, лучше
+              используйте архивы *zip или *rar. За раз можно прикрепить
+              только 1 архив. Будьте внимательны.
+      .distributor-works
+        %h2 Работы партнера
+        .works-list.dummy
+        %button.base-button Загрузить еще работы
+
+  %footer.footer
+    .footer-snippet
+      %img{:src => "images/logo_bottom.png", :width => 113, :height => 42, :alt => "Отделочные материалы Tristone®"}
+      %p.footer-snippet-text
+        Уникальный по своим характеристикам материал TRISTONE был создан на базе современных разработок и на
+        высокотехнологичном оборудовании.
+    .wrapper
+      %ul.footer-nav
+        %li.footer-nav-item
+          %a.footer-nav-link{:href => "#"} О компании
+        %li.footer-nav-item
+          %a.footer-nav-link{:href => "#"} Каталог цветов
+        %li.footer-nav-item
+          %a.footer-nav-link{:href => "#"} Изделия из камня
+        %li.footer-nav-item
+          %a.footer-nav-link.footer-nav-active{:href => "#"} Где заказать?
+        %li.footer-nav-item
+          %a.footer-nav-link{:href => "#"} Техническая информация
+        %li.footer-nav-item
+          %a.footer-nav-link{:href => "#"} Как связаться
+      %p.footer-contact
+        %strong Главный офис
+        %br
+        41-5 Moonpyong-Dong,
+        %br
+        Daeduk-Gu, Daejeon, Korea
+        %br
+        +82 42 930 3300
+        %br
+        %a{:href => "mailto:tristone@lion-cemtech.co.kr"} tristone@lion-cemtech.co.kr
+      %p.footer-contact
+        %strong Tristone Россия
+        %br
+        Москва, Фрунзенская наб., 30,
+        %br
+        офис 54
+        %br
+        +7 (499) 242-80-51
+        %br
+        %a{:href => "mailto:info@tristone.ru"} info@tristone.ru
+      %p.footer-copyright
+        © 2010-2013 © LION CHEMTECH, 2013 г. Все права защищены. Логотип Tristone™ и все названия продуктов,
+        отмеченные символом ® или ™ являются зарегистрированными товарными знаками или товарными знаками
+        компании Lion Chemtech или ее филиалов.
+      %p.footer-developer Design by Openlac
