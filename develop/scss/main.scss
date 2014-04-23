@@ -15,7 +15,8 @@ h2.like-h1 { font-size: 34px !important; font-weight: 300 !important; line-heigh
 h1 {
   &.left { float: left; margin-right: .3em; }
   &:first-child,
-  & + h2.like-h1 { margin-top: 0; }
+  & + h2.like-h1,
+  .work-nav + & { margin-top: 0; }
   span { color: #919191; }
 }
 h3 { font-size: 18px; font-weight: 400; line-height: 1.2; margin: 35px 0 25px; }
@@ -172,6 +173,18 @@ blockquote { font-size: 24px; font-weight: 300; margin: 0 0 25px; }
     img { width: 21px; height: 21px; top: -2px; border: 1px solid #ddd; }
     span { margin-left: 30px; }
   }
+}
+.work-nav {
+  float: right;
+  a { display: inline-block; width: 25px; height: 47px; line-height: 47px; overflow: hidden; text-indent: 25px; margin-left: 10px; }
+}
+.work-nav-prev {
+  background: inline-image('left_gray.png');
+  &:hover { background: inline-image('left_hover.png'); }
+}
+.work-nav-next {
+  background: inline-image('right_gray.png'); left: auto; right: -80px;
+  &:hover { background: inline-image('right_hover.png'); }
 }
 
 .distributors,
