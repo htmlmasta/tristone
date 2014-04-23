@@ -318,4 +318,13 @@
       %a{href: '#'} Не нашли свой город?
 
   %script{:src => "js/jquery-1.11.0.min.js"}
-  %script{:src => "js/region_popup.js"}
+  %script{:src => "js/popup.js"}
+  :javascript
+    $(document).ready(function() {
+      $('.js-choose-region').on('click', function() {
+        Popup.show('.js-region-popup');
+      });
+      $('.js-popup-close').on('click', function() {
+        Popup.hide('.js-region-popup');
+      });
+    });

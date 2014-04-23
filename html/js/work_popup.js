@@ -61,13 +61,7 @@ var
     $('.work-popup-prev').toggle($parent.index() != 0);
     $('.work-popup-next').toggle($parent.index() != $parent.siblings().length);
     $container.show().css({opacity: 1}).addClass('work-content-current').siblings('.work-content').hide().css({opacity: 0}).removeClass('work-content-current');
-    $('.overlay').show();
-    preTop = ($win.height() - $popup.outerHeight()) / 2;
-    preLeft = ($win.width() - $popup.outerWidth()) / 2;
-    $popup.show().css({
-      top: preTop > 50 ? preTop + $doc.scrollTop() : 50 + $doc.scrollTop(),
-      left: preLeft > 0 ? preLeft + $doc.scrollLeft() : $doc.scrollTop()
-    });
+    Popup.show('.work-popup');
 
     return false;
   },
@@ -103,7 +97,7 @@ var
   },
 
   closeWork = function() {
-    $('.overlay, .work-popup').hide();
+    Popup.hide('.work-popup');
     return false;
   },
 

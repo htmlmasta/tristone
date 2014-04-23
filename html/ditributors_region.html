@@ -301,5 +301,15 @@
     </p>
   </div>
   <script src="js/jquery-1.11.0.min.js"></script>
-  <script src="js/region_popup.js"></script>
+  <script src="js/popup.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.js-choose-region').on('click', function() {
+        Popup.show('.js-region-popup');
+      });
+      $('.js-popup-close').on('click', function() {
+        Popup.hide('.js-region-popup');
+      });
+    });
+  </script>
 </body>
