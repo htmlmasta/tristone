@@ -23,9 +23,11 @@ var Popup = (function($) {
   return {
     show: function(selector) {
       _show(selector);
+      return false;
     },
     hide: function(selector) {
       _hide(selector);
+      return false;
     }
   }
 }(jQuery));

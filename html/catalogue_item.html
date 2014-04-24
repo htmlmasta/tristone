@@ -28,6 +28,7 @@
         <ul class="left-submenu">
           <li class="left-submenu-item"><a class="left-submenu-link" href="#"><img alt="T-001" src="images/stones/t_001_mini.jpg">
           <span>T-001</span>
+          Chalcedony</a></li>
           <li class="left-submenu-item left-submenu-active"><a class="left-submenu-link" href="#"><img alt="T-002" src="images/stones/t_002_mini.jpg">
           <span>T-002</span>
           Tourmaline</a></li>
@@ -171,7 +172,7 @@
               <br>
               <a href="#">Сертификат безопасности</a>
             </p>
-            <button class="base-button">Заказать у дилера</button>
+            <button class="base-button js-order-link">Заказать у дилера</button>
           </div>
         </div>
         <h2 class="like-h1">Примеры использования</h2>
@@ -436,7 +437,76 @@
       <p class="footer-developer">Design by Openlac</p>
     </div>
   </footer>
+  <div class="overlay js-overlay"></div>
+  <div class="popup js-order-popup">
+    <a class="popup-close js-popup-close" href="#">Закрыть</a>
+    <h2>Оформить заявку на поставку камня</h2>
+    <ul class="order-list">
+      <li class="order-item">
+        <div class="order-that">
+          <img alt="" class="order-that-image" src="images/stones/t_005_order.jpg">
+          <div class="order-that-name">Tristone® Baroque T003</div>
+          <select class="order-that-type">
+            <option>Лист, мм   3680 x 760 x 12,3</option>
+          </select>
+        </div>
+        <div class="order-amount">
+          <label class="order-amount-label">Количество листов:</label>
+          <input class="order-amount-input" type="text" value="4">
+          шт.
+        </div>
+        <div class="order-action">
+          <a class="order-item-delete" href="#" title="Удалить камень из заказа">Удалить камень из заказа</a>
+        </div>
+      </li>
+    </ul>
+    <div class="add-order-item">
+      <a href="#">Добавить камень</a>
+    </div>
+    <form action="/" class="order-form">
+      <fieldset>
+        <div class="form-horizontal-field">
+          <input class="form-field" placeholder="Наименование организации" type="text">
+          <div class="form-tip">
+            В формате:
+            <br>
+            (ООО / ИП / ЗАО / ОАО “название&nbsp;компании”)
+          </div>
+        </div>
+        <div class="form-horizontal-field">
+          <input class="form-field" placeholder="Контактное лицо (Имя, Фамилия)" type="text">
+          <div class="form-tip">Представьтесь (ФИО)</div>
+        </div>
+        <div class="form-horizontal-field">
+          <input class="form-field" placeholder="Контактный телефон" type="text">
+          <div class="form-tip">Контактный телефон в формате +7 965 5000 192</div>
+        </div>
+        <div class="form-horizontal-field">
+          <input class="form-field" placeholder="Адрес электронной почты" type="text">
+        </div>
+        <div class="form-horizontal-field">
+          <div class="form-field">
+            <select class="form-field-select">
+              <option>Область, край</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-horizontal-field">
+          <div class="form-field">
+            <select class="form-field-select">
+              <option>Город</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-buttons">
+        <a class="form-cancel" href="#">Удалить заказ</a>
+        <input class="submit" type="submit" value="Оформить заказ">
+      </div>
+    </form>
+  </div>
   <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/popup.js"></script>
   <script>
     $(document).ready(function() {
       $('.js-anchor-menu .left-menu-active .left-submenu').css({display: 'block'}).parent().siblings().find('.left-submenu').css({display: 'none'});
@@ -457,6 +527,13 @@
         }
       });
       $(window).trigger('scroll');
+    
+      $('.js-order-link').on('click', function() {
+        return Popup.show('.js-order-popup');
+      });
+      $('.js-order-popup .js-popup-close').on('click', function() {
+        return Popup.hide('.js-order-popup');
+      });
     });
   </script>
 </body>

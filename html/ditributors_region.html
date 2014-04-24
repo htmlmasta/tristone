@@ -305,10 +305,10 @@
   <script>
     $(document).ready(function() {
       $('.js-choose-region').on('click', function() {
-        Popup.show('.js-region-popup');
+        return Popup.show('.js-region-popup');
       });
       $('.js-popup-close').on('click', function() {
-        Popup.hide('.js-region-popup');
+        return Popup.hide('.js-region-popup');
       });
     });
   </script>
