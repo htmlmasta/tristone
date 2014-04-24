@@ -147,12 +147,15 @@ blockquote { font-size: 24px; font-weight: 300; margin: 0 0 25px; }
 .order-form {
   fieldset { border: 0; padding: 0 0 10px; }
   .form-horizontal-field { position: relative; padding: 0 0 15px; overflow: hidden; }
-  .form-field {
-    border: 0; border-bottom: 2px solid #c7c7c7; float: left; width: 340px; font-size: 18px; padding: 5px 15px;
-    select { font-size: 18px; border: 0; width: 344px; margin: -2px; }
-  }
+  .form-field { border: 0; border-bottom: 2px solid #c7c7c7; float: left; width: 340px; font-size: 18px; padding: 5px 15px; outline: none; }
   .form-tip { font-size: 12px; line-height: 1.3; font-weight: 600; width: 320px; position: absolute; right: 0; bottom: 23px; }
+  .form-error-str { color: #d00; font-size: 12px; line-height: 19px; clear: both; padding-left: 15px; }
+  .form-error {
+    .form-field { border-bottom: 2px solid #d00; }
+    .form-tip {  bottom: 42px; }
+  }
 }
+
 .form-buttons { border-top: 1px solid #e3e3e3; background: #f0f0f0; margin: 0 -40px -50px; padding: 25px 40px; overflow: hidden; line-height: 46px; }
 .form-buttons .submit { height: 46px; border: 0; border-radius: 23px; background: #262626; font: 400 14px/46px "Open Sans", sans-serif; color: #fff; padding: 0 40px; cursor: pointer; }
 .form-cancel {

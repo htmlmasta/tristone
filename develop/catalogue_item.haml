@@ -443,22 +443,19 @@
             В формате:
             %br
             (ООО / ИП / ЗАО / ОАО “название&nbsp;компании”)
-        .form-horizontal-field
+        .form-horizontal-field.form-error
           %input.form-field{:type => "text", :placeholder => "Контактное лицо (Имя, Фамилия)"}
           .form-tip Представьтесь (ФИО)
+          .form-error-str Необходимо заполнить
         .form-horizontal-field
           %input.form-field{:type => "text", :placeholder => "Контактный телефон"}
           .form-tip Контактный телефон в формате +7 965 5000 192
         .form-horizontal-field
           %input.form-field{:type => "text", :placeholder => "Адрес электронной почты"}
         .form-horizontal-field
-          .form-field
-            %select.form-field-select
-              %option Область, край
+          %input.form-field{:type => "text", :placeholder => "Область, край"}
         .form-horizontal-field
-          .form-field
-            %select.form-field-select
-              %option Город
+          %input.form-field{:type => "text", :placeholder => "Город"}
       .form-buttons
         %a.form-cancel{:href => "#"} Удалить заказ
         %input.submit{type: 'submit', value: 'Оформить заказ'}

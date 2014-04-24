@@ -549,13 +549,7 @@ blockquote {
   width: 340px;
   font-size: 18px;
   padding: 5px 15px;
-}
-
-.order-form .form-field select {
-  font-size: 18px;
-  border: 0;
-  width: 344px;
-  margin: -2px;
+  outline: none;
 }
 
 .order-form .form-tip {
@@ -566,6 +560,22 @@ blockquote {
   position: absolute;
   right: 0;
   bottom: 23px;
+}
+
+.order-form .form-error-str {
+  color: #d00;
+  font-size: 12px;
+  line-height: 19px;
+  clear: both;
+  padding-left: 15px;
+}
+
+.order-form .form-error .form-field {
+  border-bottom: 2px solid #d00;
+}
+
+.order-form .form-error .form-tip {
+  bottom: 42px;
 }
 
 .form-buttons {
