@@ -103,7 +103,7 @@
               %br
               %a{:href => "mailto:info@decoroom.ru"} info@decoroom.ru
             %p
-              %a{:href => "#"} Написать представителям салона
+              %a.js-contact-link{:href => "#"} Написать представителям салона
           .work-details-section
             %p Фотографии предоставлены салоном интерьерных решений “Деко’ рум”, Екатеринбург
             %p
@@ -243,6 +243,34 @@
     %a.popup-close{:href => "#", :title => "Закрыть"} Закрыть
     %a.work-popup-arrow.work-popup-prev{:href => "#", :title => "Предыдущая работа"} Предыдущая работа
     %a.work-popup-arrow.work-popup-next{:href => "#", :title => "Следующая работа"} Следующая работа
+  .popup.js-contact-popup
+    %a.popup-close.js-popup-close{href: '#'} Закрыть
+    %h2 Написать представителям салона
+    %hr
+    %form.order-form{:action => "/"}
+      %fieldset
+        .form-horizontal-field.form-error
+          %input.form-field{:type => "text", :placeholder => "Представьтесь"}
+          .form-tip Имя, фамилия
+          .form-error-str Необходимо заполнить
+        .form-horizontal-field
+          %input.form-field{:type => "text", :placeholder => "Номер телефон"}
+          .form-tip Телефон в формате +7 965 5000 192
+        .form-horizontal-field
+          %input.form-field{:type => "text", :placeholder => "Адрес электронной почты"}
+        .form-horizontal-field.form-field-wide
+          %textarea.form-field{:rows => 5, :placeholder => "Текст письма"}
+      .form-buttons
+        %input.submit{type: 'submit', value: 'Отправить письмо'}
   %script{:src => "js/jquery-1.11.0.min.js"}
   %script{:src => "js/popup.js"}
   %script{:src => "js/work_popup.js"}
+  :javascript
+    $(document).ready(function() {
+      $('.js-contact-link').on('click', function() {
+        return Popup.show('.js-contact-popup');
+      });
+      $('.js-contact-popup .js-popup-close').on('click', function() {
+        return Popup.hide('.js-contact-popup');
+      });
+    });

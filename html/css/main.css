@@ -114,6 +114,7 @@ p.tip {
   height: 10px;
   top: -10px;
   left: -50%;
+  -webkit-box-shadow: 0 0 6px #eee;
   box-shadow: 0 0 6px #eee;
 }
 
@@ -396,6 +397,7 @@ blockquote {
   position: absolute;
   left: 0;
   top: 0;
+  -webkit-box-shadow: 1px 1px 2px #c4c4c4;
   box-shadow: 1px 1px 2px #c4c4c4;
 }
 
@@ -467,6 +469,7 @@ blockquote {
 .order-that-image {
   float: left;
   margin-right: 15px;
+  -webkit-box-shadow: 1px 1px 3px #000;
   box-shadow: 1px 1px 3px #000;
 }
 
@@ -534,6 +537,7 @@ blockquote {
 .order-form fieldset {
   border: 0;
   padding: 0 0 10px;
+  width: 720px;
 }
 
 .order-form .form-horizontal-field {
@@ -576,6 +580,13 @@ blockquote {
 
 .order-form .form-error .form-tip {
   bottom: 42px;
+}
+
+.order-form .form-field-wide textarea.form-field {
+  width: 690px;
+  padding: 5px 15px;
+  font: 18px/1.2 "Open Sans", sans-serif;
+  background: #e6e6e6;
 }
 
 .form-buttons {
@@ -621,6 +632,7 @@ blockquote {
   float: right;
   clear: right;
   width: 100%;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -872,6 +884,7 @@ blockquote {
 
 .distributor-list {
   width: 50%;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
@@ -917,6 +930,7 @@ blockquote {
 .distributor-filials {
   float: left;
   width: 50%;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-bottom: 1px solid #dedede;
@@ -963,6 +977,7 @@ blockquote {
 .distributor-order .text-field,
 .distributor-order .textarea {
   width: 100%;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
@@ -983,6 +998,7 @@ blockquote {
 
 .distributor-order .file-field {
   border: 2px solid #c8c8c8;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #5d5d5d;
@@ -1123,6 +1139,13 @@ blockquote {
   margin: 0 0 25px;
 }
 
+.popup hr {
+  background: #e3e3e3;
+  height: 1px;
+  margin: 15px -40px;
+  border: 0;
+}
+
 .popup .more-link {
   position: absolute;
   right: 40px;
@@ -1208,6 +1231,7 @@ blockquote {
   position: absolute;
   left: 0;
   top: 0;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 20px;

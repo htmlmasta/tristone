@@ -104,7 +104,7 @@
               <a href="mailto:info@decoroom.ru">info@decoroom.ru</a>
             </p>
             <p>
-              <a href="#">Написать представителям салона</a>
+              <a class="js-contact-link" href="#">Написать представителям салона</a>
             </p>
           </div>
           <div class="work-details-section">
@@ -275,7 +275,44 @@
     <a class="work-popup-arrow work-popup-prev" href="#" title="Предыдущая работа">Предыдущая работа</a>
     <a class="work-popup-arrow work-popup-next" href="#" title="Следующая работа">Следующая работа</a>
   </div>
+  <div class="popup js-contact-popup">
+    <a class="popup-close js-popup-close" href="#">Закрыть</a>
+    <h2>Написать представителям салона</h2>
+    <hr>
+    <form action="/" class="order-form">
+      <fieldset>
+        <div class="form-horizontal-field form-error">
+          <input class="form-field" placeholder="Представьтесь" type="text">
+          <div class="form-tip">Имя, фамилия</div>
+          <div class="form-error-str">Необходимо заполнить</div>
+        </div>
+        <div class="form-horizontal-field">
+          <input class="form-field" placeholder="Номер телефон" type="text">
+          <div class="form-tip">Телефон в формате +7 965 5000 192</div>
+        </div>
+        <div class="form-horizontal-field">
+          <input class="form-field" placeholder="Адрес электронной почты" type="text">
+        </div>
+        <div class="form-horizontal-field form-field-wide">
+          <textarea class="form-field" placeholder="Текст письма" rows="5"></textarea>
+        </div>
+      </fieldset>
+      <div class="form-buttons">
+        <input class="submit" type="submit" value="Отправить письмо">
+      </div>
+    </form>
+  </div>
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="js/popup.js"></script>
   <script src="js/work_popup.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.js-contact-link').on('click', function() {
+        return Popup.show('.js-contact-popup');
+      });
+      $('.js-contact-popup .js-popup-close').on('click', function() {
+        return Popup.hide('.js-contact-popup');
+      });
+    });
+  </script>
 </body>
