@@ -1008,6 +1008,7 @@ blockquote {
   line-height: 42px;
   height: 46px;
   margin-right: 175px;
+  overflow: hidden;
 }
 
 .distributor-order .file-field:before {

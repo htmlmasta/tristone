@@ -269,7 +269,7 @@ blockquote { font-size: 24px; font-weight: 300; margin: 0 0 25px; }
   .text-field { font: 600 18px/1.6 "Open Sans", sans-serif; }
   .textarea { background: #e6e6e6; font: 400 14px/1.6 "Open Sans", sans-serif; }
   .file-field {
-    border: 2px solid #c8c8c8; box-sizing: border-box; color: #5d5d5d; text-align: center; display: block; position: relative; line-height: 42px; height: 46px; margin-right: 175px;
+    border: 2px solid #c8c8c8; box-sizing: border-box; color: #5d5d5d; text-align: center; display: block; position: relative; line-height: 42px; height: 46px; margin-right: 175px; overflow: hidden;
     &:before { content: 'Прикрепить файл...'; }
     input { opacity: 0; position: absolute; left: 0; top: 0; height: 100px; width: 1000px; }
   }
