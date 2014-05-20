@@ -30,6 +30,11 @@ p {
   &:before { content: ''; display: block; height: 45px; }
 }
 
+.base-button {
+  background: #212121; height: 45px; border-radius: 23px; padding: 0 35px 0 60px; line-height: 45px; font-size: 15px; font-weight: 600; color: #fff; border: 0; position: relative; cursor: pointer; outline: none;
+  &:before { content: ''; width: 39px; height: 39px; background: inline-image('button.png') 50% 50% no-repeat #a69d92; border-radius: 50%; position: absolute; left: 3px; top: 3px; }
+}
+
 .wrapper {
   max-width: 1050px; position: relative;
   &.wide { max-width: 1250px; }
@@ -40,11 +45,6 @@ p {
   &:before,
   &:after { content: ''; position: absolute; width: 200%; height: 10px; top: -10px; left: -50%; box-shadow: 0 0 6px #eee; }
   &:after { top: auto; bottom: -10px; }
-}
-
-.base-button {
-  background: #212121; height: 45px; border-radius: 23px; padding: 0 35px 0 60px; line-height: 45px; font-size: 15px; font-weight: 600; color: #fff; border: 0; position: relative; cursor: pointer; outline: none;
-  &:before { content: ''; width: 39px; height: 39px; background: inline-image('button.png') 50% 50% no-repeat #a69d92; border-radius: 50%; position: absolute; left: 3px; top: 3px; }
 }
 
 .nav { float: right; font-size: 13px; line-height: 28px; }
