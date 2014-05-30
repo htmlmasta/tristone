@@ -8,7 +8,7 @@ a {
 .mt0 { margin-top: 0 !important; }
 .w50 { width: 50%; }
 
-.body { overflow: hidden; position: relative; }
+.body { overflow: hidden; position: relative; background: inline-image('lmbg.gif') 0 0 repeat-y #fff; }
 
 h1,
 h2.like-h1 { font-size: 34px !important; font-weight: 300 !important; line-height: 1.2; margin: 45px 0 25px; }
@@ -57,7 +57,7 @@ p {
 .left-col {
   float: left; width: 228px; color: #fff; padding: 45px 30px 45px 50px;
   &.fixed { position: fixed; left: 0; top: 0; }
-  &.bottom { position: absolute; left: 0; }
+  &.bottom { position: absolute; top: auto; bottom: 0; }
   h2:first-child { margin: 0; }
 }
 .left-menu { margin: 35px -30px 25px -50px; padding: 0; list-style: none; }
@@ -84,10 +84,10 @@ p {
     &:hover { background: #262626; text-decoration: none; color: #fff; font-weight: 600; cursor: pointer; }
   }
 }
-.snippet { margin: 100px 0; }
+.snippet { margin: 100px 0 25px; }
 
 .page-content {
-  background: #fff; margin-left: 308px; margin-bottom: -9900px; padding: 45px 40px 9945px 80px;
+  padding: 45px 40px 45px 80px; margin-left: 308px;
   &:after { content: ''; clear: both; display: block; }
   h2 { font-size: 18px; font-weight: 600; }
   h3 { font-size: 14px; font-weight: 700; }
@@ -105,7 +105,7 @@ blockquote { font-size: 24px; font-weight: 300; margin: 0 0 25px; }
 .decorate-about:before { background-image: url(../images/bg/about.jpg); }
 
 .catalogue-list {
-  margin: -45px 0 0; padding: 0; list-style: none;
+  margin: -45px 0 -25px; padding: 0; list-style: none; overflow: hidden;
   &:after { content: ''; display: block; clear: left; height: 0; }
 }
 .catalogue-item {

@@ -28,7 +28,7 @@
     %aside.left-col
       %h2 Каталог цветов
       %ul.left-menu.js-anchor-menu
-        %li.left-menu-item.left-menu-active<
+        %li.left-menu-item<
           %a.left-menu-link.smooth-scroll{:href => "#T"} Baroque (T)
           %ul.left-submenu
             %li.left-submenu-item<
@@ -435,31 +435,4 @@
         компании Lion Chemtech или ее филиалов.
       %p.footer-developer Design by Openlac
   %script{:src => "js/jquery-1.11.0.min.js"}
-  :javascript
-    $(document).ready(function() {
-      $('.js-anchor-menu .left-menu-active .left-submenu').css({display: 'block'}).parent().siblings().find('.left-submenu').css({display: 'none'});
-      $('.js-anchor-menu .left-menu-link').on('click', function() {
-        var $this = $(this);
-        $this.next().slideDown(500);
-        $this.closest('.left-menu-item').addClass('left-menu-active').siblings().removeClass('left-menu-active').find('.left-submenu').slideUp(500);
-      });
-
-      $('.smooth-scroll').click(function() {
-        $('html, body').animate({
-          scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-        return false;
-      });
-
-      $(window).on('scroll', function() {
-        var $menu = $('.left-col'), $doc = $(document);
-        if ($doc.scrollTop() < $('.header').outerHeight()) {
-          $menu.removeClass('fixed bottom');
-        } else if ($doc.scrollTop() + $menu.outerHeight() > $doc.height() - $('.footer').outerHeight()) {
-          $menu.removeClass('fixed').addClass('bottom').css({bottom: $('.footer').outerHeight()});
-        } else {
-          $menu.removeClass('bottom').addClass('fixed').css({bottom: 'auto'});
-        }
-      });
-      $(window).trigger('scroll');
-    });
+  %script{:src => "js/catalogue_ready.js"}

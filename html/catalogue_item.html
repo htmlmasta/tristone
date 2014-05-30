@@ -500,27 +500,9 @@
   </div>
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="js/popup.js"></script>
+  <script src="js/catalogue_ready.js"></script>
   <script>
     $(document).ready(function() {
-      $('.js-anchor-menu .left-menu-active .left-submenu').css({display: 'block'}).parent().siblings().find('.left-submenu').css({display: 'none'});
-      $('.js-anchor-menu .left-menu-link').on('click', function() {
-        var $this = $(this);
-        $this.next().slideDown(500);
-        $this.closest('.left-menu-item').addClass('left-menu-active').siblings().removeClass('left-menu-active').find('.left-submenu').slideUp(500);
-      });
-    
-      $(window).on('scroll', function() {
-        var $menu = $('.left-col'), $doc = $(document);
-        if ($doc.scrollTop() < $('.header').outerHeight()) {
-          $menu.removeClass('fixed bottom');
-        } else if ($doc.scrollTop() + $menu.outerHeight() > $doc.height() - $('.footer').outerHeight()) {
-          $menu.removeClass('fixed').addClass('bottom').css({bottom: $('.footer').outerHeight()});
-        } else {
-          $menu.removeClass('bottom').addClass('fixed').css({bottom: 'auto'});
-        }
-      });
-      $(window).trigger('scroll');
-    
       $('.js-order-link').on('click', function() {
         return Popup.show('.js-order-popup');
       });
