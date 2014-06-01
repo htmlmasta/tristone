@@ -7,9 +7,10 @@ html {
 
 body {
   height: 100%;
+  min-width: 1200px;
+  min-height: 900px;
   position: relative;
   margin: 0;
-  min-width: 1200px;
   background: #fff;
   color: #262626;
   font: 400 14px/1.6 "Open Sans", sans-serif;
@@ -32,7 +33,6 @@ a:hover {
   overflow: hidden;
   position: fixed;
   width: 100%;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   min-width: 1200px;
@@ -47,7 +47,6 @@ a:hover {
   height: 10px;
   top: -10px;
   left: -50%;
-  -webkit-box-shadow: 0 0 6px #eee;
   box-shadow: 0 0 6px #eee;
 }
 
@@ -85,10 +84,11 @@ a:hover {
 
 .frame {
   min-height: 100%;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding-top: 58px;
+  position: relative;
+  overflow: hidden;
 }
 
 .frame .wrapper {
@@ -107,7 +107,6 @@ a:hover {
 
 #welcome {
   background: url(../images/root_welcome_bg.jpg);
-  -webkit-background-size: cover;
   background-size: cover;
   padding-top: 20%;
 }
@@ -117,7 +116,6 @@ a:hover {
   margin-left: 10%;
   width: 500px;
   padding: 0 50px 30px 0;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.8);
@@ -203,7 +201,6 @@ a:hover {
   max-width: 1435px;
   padding: 0 90px 0 45px;
   margin: 0 auto;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -212,7 +209,6 @@ a:hover {
   float: left;
   width: 430px;
   padding: 0 50px 25px 0;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -248,7 +244,6 @@ a:hover {
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-box-shadow: 1px 1px 2px #c4c4c4;
   box-shadow: 1px 1px 2px #c4c4c4;
 }
 
@@ -385,7 +380,6 @@ a:hover {
   width: 50%;
   float: left;
   padding-right: 30px;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -467,7 +461,6 @@ a:hover {
 
 #footer .wrapper {
   margin: 0 auto;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 45px;
@@ -540,8 +533,6 @@ a:hover {
   right: 30px;
   top: 0;
   padding: 18px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.5);
 }
 
 .nav-button {
@@ -551,6 +542,10 @@ a:hover {
   border: 2px solid #414141;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.nav-button.inverted {
+  border-color: #fff;
 }
 
 .nav-button:first-child {
