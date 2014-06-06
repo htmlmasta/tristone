@@ -1,5 +1,5 @@
 html { height: 100%; }
-body { height: 100%; min-width: 1200px; min-height: 900px; position: relative; margin: 0; background: #fff; color: #262626; font: 400 14px/1.6 "Open Sans", sans-serif; }
+body { height: 100%; min-width: 1200px; min-height: 900px; position: relative; margin: 0; background: #fff; color: #262626; font: 400 14px/1.6 "Open Sans", sans-serif; overflow: hidden; }
 
 a {
   color: #c92a32; text-decoration: none;
@@ -63,7 +63,7 @@ a {
   }
   h2 { font-size: 36px; }
   .catalogue-list {
-    margin: 25px 0 0; padding: 0; list-style: none;
+    margin: 25px 0 0; padding: 0 0 35px; list-style: none;
     &:after { content: ''; display: block; clear: left; height: 0; }
   }
   .catalogue-item {
