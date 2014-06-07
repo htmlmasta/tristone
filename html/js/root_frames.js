@@ -14,7 +14,19 @@ var framesJSON = {
       return this;
     }
   },
-  'promo': {},
+  'promo': {
+    onScroll: function() {
+      var
+        frameHeight = this.$el.outerHeight(),
+        opacity = 1 - Math.min(Math.abs($doc.scrollTop() - this.$el.offset().top), frameHeight) / frameHeight,
+        shift = (1 - opacity) * 200;
+
+      this.$el.find('.left-pic').css({marginLeft: -shift, paddingRight: shift, opacity: opacity});
+      this.$el.find('.right-pic').css({marginRight: -shift, paddingLeft: shift, opacity: opacity});
+
+      return this;
+    }
+  },
   'catalogue': {},
   'works': {},
   'tech': {},
