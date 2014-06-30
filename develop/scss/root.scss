@@ -8,6 +8,7 @@ a {
 
 .header {
   height: 58px; background: #fafafa; padding: 15px 45px; overflow: hidden; position: fixed; width: 100%; box-sizing: border-box; min-width: 1200px; z-index: 100;
+  img { position: absolute; }
   &:before,
   &:after { content: ''; position: absolute; width: 200%; height: 10px; top: -10px; left: -50%; box-shadow: 0 0 6px #eee; }
   &:after { top: auto; bottom: -10px; }
